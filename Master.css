@@ -1,0 +1,295 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+    font-family: cursive;
+  
+    background-size: cover;
+    background-color: black; 
+    color: white; 
+}
+
+/* Navigation Bar */
+#TopContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11%;
+    background-color: black;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px #0de91e;
+    z-index: 1000;
+    opacity: 69.5%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links div a {
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: black;
+    color: #f7f3f3;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.nav-links div a:hover {
+    background-color: #0ee435;
+    color: black;
+    box-shadow: 0px 0px 10px #0ee435;
+}
+
+/* About Section */
+#about-container {
+    display: flex
+    ;
+        justify-content: center;
+        align-items: center;
+        padding: 101px;
+        width: 80%;
+        margin: auto;
+        color: white;
+        gap: 50px;
+}
+
+.text-box {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-align: center; /* Center text */
+}
+
+.highlight {
+    color: #0ee435;
+    font-weight: bold;
+}
+
+.image-box {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    animation: floatImage 3s infinite alternate ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+
+
+
+/* Skills Section */
+.skills {
+    width: 78%;
+    margin: 50px auto;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress {
+    width: 100%;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar {
+    height: 100%;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    color: black; /* Ensure contrast */
+    border-radius: 5px;
+}
+
+/* Individual Skill Progress */
+.html { width: 90%; background: linear-gradient(90deg, #047f44, #08e048); }
+.css { width: 90%; background: linear-gradient(90deg, #047f44, #08e048); }
+.javascript { width: 90%; background: linear-gradient(90deg, #047f44, #08e048); color: black; }
+.angularjs { width: 75%; background: linear-gradient(90deg, #047f44, #08e048); }
+.sql { width: 70%; background: linear-gradient(90deg, #047f44, #08e048); }
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    #about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-box, .image-box {
+        width: 90%;
+    }
+}
+#projects
+{
+    display:flex;
+}
+#projects div{
+   
+    height: 27vh;
+    margin-left: 10%;
+    /* display: flex
+; */
+    width: 21%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    /* background: rgba(0, 0, 0, 0.9); */
+    height:91vh;
+}
+
+.contact-container {
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    background: #0ee435;
+    border: none;
+    padding: 12px 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #07c02a;
+    box-shadow: 0 0 10px #0ee435;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+    }
+}
+/* Footer Styles */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 10px #0de91e;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links a {
+    color: #0ee435;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: white;
+    text-shadow: 0px 0px 10px #0ee435;
+}
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(rgb(143, 138, 138), rgba(255, 255, 255, 0.2) 10%, transparent),
+                url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-size: cover;
+    opacity: 0.8; 
+    z-index: -1;
+    animation: moveStars 30s linear infinite;
+}
+
+/* Star Animation */
+@keyframes moveStars {
+    0% { background-position: 0 0; }
+    100% { background-position: 3000px 3000px; } 
+}
