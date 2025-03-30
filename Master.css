@@ -25,7 +25,7 @@ body {
     align-items: center;
     box-shadow: 3px 3px 10px #0de91e;
     z-index: 1000;
-    opacity: 69.5%;
+    /* opacity: 69.5%; */
 }
 
 .nav-links {
